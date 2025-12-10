@@ -9,82 +9,100 @@
             margin: 0px;
             padding: 0px;
         }
+
+        :root{
+            --cor-de-fundo: #000000;
+            --cor-do-texto: #ffffff;
+            --cor-dos-links: #004fb6;
+            --cor-destaque: #591f80;
+        }
+
         body {
-            margin: 0;
-            height: 100vh;
-            background-image: linear-gradient(to bottom, rgb(56, 56, 56), rgb(0, 0, 0));
-            background-size: cover;
-            background-repeat: no-repeat;
+            background-color: var(--cor-de-fundo);
+            color: var(--cor-do-texto);
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        
         }
 
         header {
-            background-color: antiquewhite;
-            padding: 55px;
-            text-align: center;
-            box-shadow: inset -5px -5px 15px rgba(0, 0, 0, 0.582);
+            background-color: var(--cor-destaque);
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: inset -0px -10px 20px #00000027;
         }
 
         header h1 {
-            color: rgb(167, 108, 0);
-            text-shadow: -5px 5px 15px rgba(0, 0, 0, 0.582);
-            font-weight: bold;
+            color: var(--cor-do-texto);
+            font-size: 2em;
+            text-shadow: 5px 5px 10px #00000093;
         }
 
         main {
-            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(to bottom, rgb(56, 56, 56), rgb(0, 0, 0));
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
+            height: 60vh;
         }
-        div {
-            display: inline-block;
-            background-color: rgba(216, 255, 144, 0.589);
+
+        .cont {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            background-color: var(--cor-destaque);
+            border: 1px solid var(--cor-do-texto);
+            margin-top: 50px;
+            width: 400px;
+            height: 300px;
+            border-radius: 15px;
+            box-shadow: -15px 15px 30px #00000052;
+        }
+
+        .botao {
+            background-color: var(--cor-dos-links);
+            border: 1px solid var(--cor-de-fundo);
             width: 350px;
-            height: 600px;
-            border: 2px solid black;
-            border-radius: 17px;
-            margin: 20px;
-            padding: 5px;
-            box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.418);
-            position: relative;
-        }
-
-        a {
-            display: inline-block;
-            background-color: aqua;
-            padding: 13px;
-            margin: 10px;
-            color: brown;
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
+            height: 70px;
+            margin: 25px;
             border-radius: 10px;
-            text-decoration: none;
-            text-align: center;
-            font-weight: bolder;
-            box-shadow: 1px 2px 7px black;
+            box-shadow: 5px 5px 15px #0000007a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        a:hover {
-            background-color: rgb(214, 214, 214);
-            text-shadow: 1px 1px 10px black;
-            color: yellow;
+        .botao:hover {
+            background-color: #470b72;
+            transition: 0.3s;
+        }
 
+        main div a {
+            color: var(--cor-do-texto);
+            text-decoration: none;
+        }
+
+        main div a:hover {
+            cursor: pointer;
+            text-decoration: underline;
         }
 
     </style>
 </head>
 <body>
     <header>
-        <h1>Pagina de links do Cordel</h1>
+        <h1><b>Pagina de links <br> do Cordel</b></h1>
     </header>
     <main>
 
-        <div>
-            <a href="cordel.html">Acesse O Cordel<br>AQUI!!</a>
+        <div class="cont">
+            <div class="botao"><a href="cordel.html">ACESSE O CORDEL<br>AQUI!!</a></div>
+            
+            <div class="botao"><a href="cordel.html">ACESSE O CORDEL<br>AQUI!!</a></div>
+            
         </div>
+        
 
     </main>
 </body>
